@@ -12,10 +12,11 @@ Twin repositories have the same history in other languages: `eval-platform-fibon
 ## Usage
 
 ```rust
-use numkit::{factorial, fibonacci};
+use numkit::{factorial, fibonacci, fibonacci_big};
 
 assert_eq!(factorial(5), Ok(120));
-assert_eq!(fibonacci(10), 55);
+assert_eq!(fibonacci(10), Ok(55));
+assert_eq!(fibonacci_big(100).unwrap().to_string(), "354224848179261915075");
 ```
 
 ## Tests
@@ -34,3 +35,4 @@ Every change starts with a spec in `specs/NNN-name/spec.md`.
 |---|---|
 | [001-factorial](specs/001-factorial/spec.md) | `factorial(n)` |
 | [002-fibonacci](specs/002-fibonacci/spec.md) | `fibonacci(n)` |
+| [003-fibonacci-validation-bigint](specs/003-fibonacci-validation-bigint/spec.md) | input validation, `fibonacci_big(n)` |
