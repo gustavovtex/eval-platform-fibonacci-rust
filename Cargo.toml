@@ -1,0 +1,10 @@
+[package]
+name = "eval-platform-fibonacci-rust"
+version = "1.0.0"
+edition = "2021"
+description = "Small number utilities used as a fast, dependency-free fixture for the eval platform."
+publish = false
+
+[lib]
+name = "numkit"
+path = "src/lib.rs"
